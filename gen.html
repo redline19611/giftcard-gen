@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GiftcardGenerator</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/generator.css">
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <!-- <img src="logo/logo.png" alt="Logo" class="logo"> -->
+      <h2 class="title">please enter an email do you want to receive the gift card in it</h2>
+      <form id="gift-form">
+        <div class="form-group">
+          <label for="email">We will send your gift to this email.</label>
+          <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <div class="form-group">
+          <label for="amount">Enter Amount</label>
+          <select id="amount" name="amount" required>
+            <option value="" >Select Amount</option>
+            <option value="10">$10</option>
+            <option value="20">$20</option>
+            <option value="50">$50</option>
+            <option value="50">$100</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Next</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    var nextBtn = document.querySelector('.submit-btn');
+nextBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  window.location.href = 'verify.html';
+});
+  </script>
+  <!-- <script src="two.js"></script> -->
+</body>
+</html>
